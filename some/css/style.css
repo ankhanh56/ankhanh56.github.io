@@ -80,11 +80,12 @@ p {
 /* Header section */
 #header {
 	position: fixed;
-	z-index: 1000;
+	z-index: -1;
 	left: 0;
 	top: 0;
 	width: 100vw;
 	height: auto;
+	opacity: 0%;
 }
 #header .header {
 	min-height: 8vh;
@@ -206,7 +207,7 @@ p {
 
 /* Hero Section */
 #index {
-	background-image: url(/img/jingyuan.jpg);
+	background-image: url(../img/hero-bg.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;

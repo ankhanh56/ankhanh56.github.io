@@ -707,7 +707,7 @@ header.mobile-header-1 .site-logo {
   display: inline-block;
 }
 header.mobile-header-1 .site-logo img {
-  max-height: 30px;
+  max-height: 20px;
 }
 header.mobile-header-1.light {
   background: #F9F9FF;
