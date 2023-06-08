@@ -391,3 +391,18 @@ $(function(){
     });
 
 });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+///           Play sound Herta basic
+///                   but can't fix bug ...hehe
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var audio1 = document.getElementById("sound1")
+var audio2 = document.getElementById("sound2")
+var play = document.getElementById("play");
+play.onclick = function () {
+  audio1.play();
+  if(audio1.play()){
+    audio2.play();
+  }
+}

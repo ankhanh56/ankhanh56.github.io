@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 </head>
 
-<body>
+<body id="play">
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -66,9 +66,10 @@
 			</div>
 			<!-- logo image -->
 			<div class="site-logo">
-				<a href="index.html">
+				<div id="playsound">
 					<img src="./images/some/hertaa_github.gif" alt="herta">
-				</a>
+					
+				</div>
 			</div>
 		</div>
 	</header>
@@ -78,9 +79,15 @@
 
 		<!-- logo image -->
 		<div class="site-logo">
-			<a href="index.html">
-				<img src="./images/some/hertaa_github.gif" alt="herta">
-			</a>
+			<div id="playsound">
+				<img id="play" src="./images/some/hertaa_github.gif" alt="herta">
+				<audio id="sound1">
+					<source src="/some/sound/kuru1.mp3" type="audio/mp3">
+				</audio>
+				<audio id="sound2">
+					<source src="/some/sound/kuru2.mp3" type="audio/mp3">
+				</audio>
+			</div>
 		</div>
 
 		<!-- main menu -->
