@@ -43,7 +43,7 @@ Description: Portfolio/CV/Resume HTML Template
 
 html {
   margin: 0 !important;
-  overflow: hidden !important;
+  overflow: auto !important;
 }
 
 body {

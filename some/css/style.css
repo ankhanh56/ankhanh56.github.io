@@ -9,6 +9,9 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+body::-webkit-scrollbar{
+	display: none;
+  }
 a {
 	text-decoration: none;
 }
