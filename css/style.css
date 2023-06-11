@@ -52,10 +52,12 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  overflow-x: hidden;
-  overflow-y: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 img {
