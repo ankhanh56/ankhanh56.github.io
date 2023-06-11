@@ -43,7 +43,7 @@ Description: Portfolio/CV/Resume HTML Template
 
 html {
   margin: 0 !important;
-  overflow: auto !important;
+  overflow: hidden !important;
 }
 
 body {
@@ -53,6 +53,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
