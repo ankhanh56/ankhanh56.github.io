@@ -64,13 +64,13 @@ body::before{
     gap: 25px;
 }
 
-.profile-card__desc h1{
-    font-size: 2.5rem;
+.profile-card__desc h2{
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .profile-card__desc div{
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
     justify-content: center;
 }
@@ -136,13 +136,22 @@ body::before{
         }
     }
 }
+.profile-card__social a.discord{
+    background: linear-gradient(45deg, #0252ff, #013b6b);
+    box-shadow: 0 4px 30px rgba(107, 171, 255, 0.5);
+}
 
-.profile-card__social a.facebook{
-    background: linear-gradient(45deg, #3b5998, #0078d7);
+.profile-card__social a.youtube{
+    background: linear-gradient(45deg, #f81f03, #a87b00);
     box-shadow: 0 4px 30px rgba(43, 98, 169, 0.5);
 }
 
-.profile-card__social a.twitter{
+.profile-card__social a.facebook{
+    background: linear-gradient(45deg, #3b5998, #0078d7);
+    box-shadow: 0 4px 30px rgba(2, 255, 242, 0.5);
+}
+
+.profile-card__social a.x{
     background: linear-gradient(45deg, #1da1f2, #0e71c8);
     box-shadow: 0 4px 30px rgba(19, 172, 212, 0.7);
 }
