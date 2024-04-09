@@ -1,5 +1,4 @@
 ###Page use HTML5, CSS3, Javasrcipt basic...
-www.ankhanh.id.vn
 
 [Page]
 
