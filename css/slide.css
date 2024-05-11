@@ -12,7 +12,25 @@
 }
 
 body{
+    align-items: center;
+    text-align: center;
     display: inline-block;
     position: relative;
+    padding: 10px 10px;
 }
 
+@media slideitem {
+    
+}
+
+img{
+    box-shadow: 20px 10px #8F8F76;
+    border-radius: 30px;
+    /* max-width: 95%; */
+    width: 1600px;
+    height: 900px;
+}
+
+.slide{
+    content: none;
+}
