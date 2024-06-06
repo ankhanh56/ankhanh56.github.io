@@ -16,7 +16,7 @@ body::before{
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: url(../ankhanh/img/acheron.webp) no-repeat center;
+    background: url(https://ankhanh56.github.io/ankhanh/img/acheron.webp) no-repeat center;
     background-size: cover;
     animation: backgroundZoomAnimate 20s forwards;
 }
