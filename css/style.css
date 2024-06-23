@@ -57,6 +57,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 *::-webkit-scrollbar {
@@ -2782,4 +2783,3 @@ only screen and (min-device-pixel-ratio: 1.5) {
     transform: rotate(-360deg);
   }
 }
-    
