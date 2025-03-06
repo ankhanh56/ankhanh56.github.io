@@ -1,4 +1,4 @@
-@import url("/css/reset.css");
+@import url("./reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 
 body{
@@ -16,7 +16,7 @@ body::before{
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: url(https://ankhanh56.github.io/ankhanh/img/acheron.webp) no-repeat center;
+    background: url('../images/bg-g.png') no-repeat center;
     background-size: cover;
     animation: backgroundZoomAnimate 20s forwards;
 }
