@@ -1,178 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 20;
-    box-sizing: border-box;
+html, body { height:100%; margin:0 }
+body { background:#fff; }
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+#loader.hidden {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
 }
 
-body {
-    display: flex;
-    margin: 50px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Oxanium, sans-serif;
-    /* Định nghĩa font chữ mặc định */
-    font-size: 18px;
-    /* Cỡ chữ mặc định */
-    line-height: 1.5;
-    /* Độ cao dòng để dễ đọc */
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+:root{
+  --c1:#ffd9c2; --c2:#f9c8d8; --c3:#f5b7c5; --c4:#e5c8ff;
+  --c5:#d3ccff; --c6:#c7d8ff; --c7:#cfe6ff; --c8:#eaf2ff;
+  --p1x:60%; --p1y:28%; --p2x:48%; --p2y:40%;
+  --p3x:40%; --p3y:55%; --p4x:78%; --p4y:18%;
+  --p5x:88%; --p5y:66%; --p6x:22%; --p6y:78%;
+  --p7x:34%; --p7y:86%; --p8x:16%; --p8y:36%;
 }
 
-:root {
-    --bg-color: rgb(46, 48, 53);
-    --text-color: white;
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(60% 50% at var(--p1x) var(--p1y), var(--c1) 0%, rgba(255,217,194,0) 60%),
+    radial-gradient(50% 45% at var(--p2x) var(--p2y), var(--c2) 0%, rgba(249,200,216,0) 62%),
+    radial-gradient(55% 48% at var(--p3x) var(--p3y), var(--c3) 0%, rgba(245,183,197,0) 65%),
+    radial-gradient(60% 55% at var(--p4x) var(--p4y), var(--c5) 0%, rgba(211,204,255,0) 68%),
+    radial-gradient(65% 55% at var(--p5x) var(--p5y), var(--c6) 0%, rgba(199,216,255,0) 70%),
+    radial-gradient(65% 55% at var(--p6x) var(--p6y), var(--c7) 0%, rgba(207,230,255,0) 72%),
+    radial-gradient(70% 60% at var(--p7x) var(--p7y), var(--c8) 0%, rgba(234,242,255,0) 74%),
+    radial-gradient(65% 55% at var(--p8x) var(--p8y), var(--c4) 0%, rgba(229,200,255,0) 66%);
+  background-blend-mode: screen;
+  filter: blur(8px) saturate(110%);
+  animation: subtle-zoom 28s ease-in-out infinite, fadein-bg 1.5s ease forwards;
+  opacity: 0;
 }
 
-.light-mode {
-    --bg-color: #fffad9;
-    --text-color: black;
+body.loaded::before {
+  opacity: 1;
 }
 
-#toggle-mode {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 10px;
-    background: gray;
-    color: white;
-    border: 1px solid rgb(255, 220, 220);
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 18px;
-    transition: background-color 0.5s, transform 0.2s;
+@keyframes subtle-zoom{
+  0%   { transform: scale(1) }
+  50%  { transform: scale(1.03) }
+  100% { transform: scale(1) }
+}
+@keyframes fadein-bg {
+  from { opacity: 0 }
+  to   { opacity: 1 }
 }
 
-#toggle-mode:hover {
-    color: aqua;
-    background: rgba(255, 255, 255, 0.5);
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation:none; opacity:1 }
 }
-
-section {
-    display: flex;
-    flex-direction: column;
-    /* Xếp các div trong section theo chiều dọc */
-    justify-content: flex-start;
-    align-items: center;
-    width: 90%;
-    max-width: auto;
-    margin: 50px auto;
-    padding: 10px;
-    background: linear-gradient(135deg, #1e1e1e, #333);
-    color: white;
-    border-radius: 12px;
-    text-align: center;
-    gap: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hiệu ứng khi hover */
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* image*/
-section img {
-    align-items: center;
-    border-radius: 50%;
-    width: 25%;
-    height: auto;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    /* Ẩn gạch chân */
-}
-
-.section-item {
-    cursor: pointer;
-    width: 100%;
-    padding: 20px;
-    background-image: url('../1363709.png');
-    /* Đặt đường dẫn tới hình ảnh */
-    background-size: cover;
-    /* Đảm bảo ảnh phủ toàn bộ phần tử */
-    background-position: center;
-    /* Căn giữa ảnh trong phần tử */
-    background-repeat: no-repeat;
-    /* Không lặp lại ảnh nếu nó nhỏ hơn phần tử */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    /* Đảm bảo chữ nổi bật trên nền ảnh */
-}
-.section-item2 {
-    cursor: pointer;
-    width: 100%;
-    padding: 20px;
-    background-image: url('../FullSizeRender.webp');
-    /* Đặt đường dẫn tới hình ảnh */
-    background-size: cover;
-    /* Đảm bảo ảnh phủ toàn bộ phần tử */
-    background-position: center;
-    /* Căn giữa ảnh trong phần tử */
-    background-repeat: no-repeat;
-    /* Không lặp lại ảnh nếu nó nhỏ hơn phần tử */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    /* Đảm bảo chữ nổi bật trên nền ảnh */
-}
-
-/* Tiêu đề bên trong */
-section h2 {
-    margin-top: 0;
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-section h1 {
-    font-size: 35px;
-    text-align: center;
-}
-
-/* Nội dung */
-section p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Responsive: Điều chỉnh cho màn hình nhỏ */
-@media (max-width: 768px) {
-    section {
-        padding: 30px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    section p {
-        font-size: 16px;
-    }
-}
-
-.footer {
-    display: flex;
-    text-align: center;    /* Căn giữa nội dung */
-    padding: 20px;
-    color: white;
-    margin-top: auto;  /* Đẩy footer xuống dưới cùng */
-    margin-top: auto;  /* Đẩy footer xuống dưới cùng */
-    justify-content: center;  /* Căn giữa theo chiều ngang */
-    align-items: center;
-  }
