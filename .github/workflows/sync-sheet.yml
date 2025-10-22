@@ -17,8 +17,12 @@ jobs:
         run: |
           curl -L "$SHEET_URL" -o sheet.csv
 
+
+
       - name: Convert CSV to JSON
         run: |
+          rm -rf ankhanh/data.json
+
           python3 - << 'PY'
           import csv, json, sys
           from pathlib import Path
@@ -31,8 +35,9 @@ jobs:
           head, data = rows[0], rows[1:]
           head = [h.strip("\ufeff ").strip() for h in head]
           js = [{head[i]: (r[i].strip() if i < len(r) else "") for i in range(len(head))} for r in data]
+
           from pathlib import Path
-          Path("ankhanh").mkdir(exist_ok=True)  # tạo thư mục ankhanh nếu chưa có
+          Path("ankhanh").mkdir(exist_ok=True)  
           Path("ankhanh/data.json").write_text(
               json.dumps(js, ensure_ascii=False, indent=2), encoding="utf-8"
           )
