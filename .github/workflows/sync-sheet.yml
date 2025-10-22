@@ -19,39 +19,39 @@ jobs:
 
 
 
-      - name: Convert CSV to JSON
+      - name: Convert CSV to JSON 
         run: |
-          rm -rf ankhanh/data.json
+          rm -f ankhanh/data.json
+          mkdir -p ankhanh
 
           python3 - << 'PY'
-          import csv, json, sys
+          import csv, json, io
           from pathlib import Path
 
-          rows = list(csv.reader(open("sheet.csv", encoding="utf-8")))
+          raw = Path("sheet.csv").read_text(encoding="utf-8", errors="ignore")
+          rows = list(csv.reader(io.StringIO(raw)))
           if not rows:
-              print("CSV empty")
-              sys.exit(0)
+              Path("ankhanh/data.json").write_text("[]", encoding="utf-8")
+              raise SystemExit(0)
 
           head, data = rows[0], rows[1:]
           head = [h.strip("\ufeff ").strip() for h in head]
           js = [{head[i]: (r[i].strip() if i < len(r) else "") for i in range(len(head))} for r in data]
 
-          from pathlib import Path
-          Path("ankhanh").mkdir(exist_ok=True)  
           Path("ankhanh/data.json").write_text(
-              json.dumps(js, ensure_ascii=False, indent=2), encoding="utf-8"
+              json.dumps(js, ensure_ascii=False, indent=2),
+              encoding="utf-8"
           )
-
           PY
 
       - name: Commit updated data.json
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions"
-            git config user.email "actions@users.noreply.github.com"
-            git add data.json
-            git commit -m "Update data.json"
-            git push
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add ankhanh/data.json
+          git commit -m "Update ankhanh/data.json"
+          git push
           else
             echo "No changes to commit"
           fi
