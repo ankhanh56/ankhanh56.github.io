@@ -1,7 +1,7 @@
 name: Sync Google Sheet to JSON
 on:
   schedule:
-    - cron: "0 */6 * * *"   # chạy 6 giờ/lần
+    - cron: "0 */6 * * *" # chạy 6 giờ/lần
   workflow_dispatch:
 permissions:
   contents: write
@@ -31,7 +31,12 @@ jobs:
           head, data = rows[0], rows[1:]
           head = [h.strip("\ufeff ").strip() for h in head]
           js = [{head[i]: (r[i].strip() if i < len(r) else "") for i in range(len(head))} for r in data]
-          Path("data.json").write_text(json.dumps(js, ensure_ascii=False, separators=(",",":")), encoding="utf-8")
+          from pathlib import Path
+          Path("ankhanh").mkdir(exist_ok=True)  # tạo thư mục ankhanh nếu chưa có
+          Path("ankhanh/data.json").write_text(
+              json.dumps(js, ensure_ascii=False, indent=2), encoding="utf-8"
+          )
+
           PY
 
       - name: Commit updated data.json
