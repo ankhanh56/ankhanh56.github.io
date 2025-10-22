@@ -1,0 +1,70 @@
+name: Sync Google Sheet to JSON
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # chạy 6 giờ/lần
+  workflow_dispatch:         # cho phép chạy thủ công
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Google Sheet (CSV)
+        env:
+          SHEET_URL: ${{ secrets.SHEET_URL }}
+        run: |
+          curl -L "$SHEET_URL" -o sheet.csv
+
+      - name: Convert CSV to JSON
+        run: |
+          python3 - << 'PY'
+import csv, json, sys
+from pathlib import Path
+
+rows = list(csv.reader(open("sheet.csv", encoding="utf-8")))
+if not rows:
+    print("CSV empty"); sys.exit(0)
+
+head, data = rows[0], rows[1:]
+# ép key chuẩn, loại bỏ BOM và trim
+head = [h.strip("\ufeff ").strip() for h in head]
+js = [{head[i]: (r[i].strip() if i < len(r) else "") for i in range(len(head))} for r in data]
+
+Path("data.json").write_text(json.dumps(js, ensure_ascii=False, separators=(",",":")), encoding="utf-8")
+PY
+
+      - name: (Optional) Filter sensitive columns
+        if: ${{ secrets.FILTER_COLUMNS != '' }}
+        env:
+          FILTER_COLUMNS: ${{ secrets.FILTER_COLUMNS }}
+        run: |
+          python3 - << 'PY'
+import json, os
+from pathlib import Path
+
+cols = [c.strip() for c in os.environ.get("FILTER_COLUMNS","").split(",") if c.strip()]
+if not cols: raise SystemExit(0)
+
+p = Path("data.json")
+data = json.loads(p.read_text(encoding="utf-8"))
+
+for row in data:
+    for c in cols:
+        row.pop(c, None)
+
+p.write_text(json.dumps(data, ensure_ascii=False, separators=(",",":")), encoding="utf-8")
+print("Removed columns:", cols)
+PY
+
+      - name: Commit updated data.json
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions"
+            git config user.email "actions@users.noreply.github.com"
+            git add data.json
+            git commit -m "Update data.json"
+            git push
+          else
+            echo "No changes to commit"
+          fi
