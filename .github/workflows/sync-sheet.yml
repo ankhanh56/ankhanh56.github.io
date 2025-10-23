@@ -1,7 +1,7 @@
 name: Sync Google Sheet to JSON
 on:
   schedule:
-    - cron: "0 */6 * * *" # chạy 6 giờ/lần
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 permissions:
   contents: write
