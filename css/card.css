@@ -8,7 +8,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
+
 
 body::before{
     content: '';
@@ -199,6 +201,7 @@ body::before{
     color: white;
     cursor: pointer;
     transition: all .2s;
+    
 
     @media screen and (max-width:768px) {
         min-width: 170px;
@@ -217,6 +220,10 @@ body::before{
     }
 }
 
+ .profile-card__actions > a > button:hover{
+    
+  transform: scale(1.08);
+}
 .profile-card__actions > a > button.blue_more{
     background: linear-gradient(45deg, #1da1f2, #0e71c8);
     box-shadow: 0 4px 30px rgba(19, 172, 212, 0.4);
@@ -230,4 +237,79 @@ body::before{
 }
 .profile-card__actions > a > button.blue_more:hover{
     box-shadow: 0 17px 30px rgba(19, 172, 212, 0.75);
+}
+
+.qr-btn {
+  margin-top: 15px;
+  padding: 15px 0;
+  min-width: 250px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+.qr-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 17px 30px rgba(19, 172, 212, 0.75);
+
+}
+
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+
+  backdrop-filter: blur(100px);
+  background: transparent;
+}
+
+.qr-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.qr-content {
+  transform: scale(1.7);
+  transition: 0.5s ease;
+}
+
+.qr-modal.active .qr-content {
+  transform: scale(1.1);
+}
+
+.qr-content img {
+  width: 320px;
+  max-width: 90vw;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.mail-btn {
+    margin-top: 15px;
+  padding: 15px 0;
+  min-width: 250px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.mail-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 17px 30px rgba(19, 172, 212, 0.75);
 }

@@ -90,3 +90,4 @@ document.addEventListener("visibilitychange", () => {
     setTimeout(() => { loader.style.display = "none"; }, 600);
   }
 });
+

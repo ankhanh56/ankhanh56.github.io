@@ -88,7 +88,7 @@
           <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
         </svg>
       </a>
-      <a href="https://pin.it/4P9moPx" class="pinterest" target="_blank" title="Pinterest">
+      <a href="https://www.pinterest.com/ankhanh56/" class="pinterest" target="_blank" title="Pinterest">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-pinterest" width="24"
           height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
           stroke-linejoin="round">
@@ -120,36 +120,24 @@
         </svg>
       </a>
     </div>
-
-
-    <!-- HAYEOL -->
-
-    <div class="profile-card__img">
-      <img src="./images/some/xiaoyang.webp" alt="">
-    </div>
-    <div class="profile-card__desc">
-      <h2>Hayeol(XiaoYangHihi)</h2>
-
-
-    </div>
-    <div class="profile-card__social">
-      <a href="https://www.facebook.com/hayeol0806" class="facebook" target="_blank" title="Facebook Cá Nhân">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24"
-          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-        </svg>
-      </a>
-    </div>
-
+      <button class="qr-btn" onclick="openQR()">Vietcombank</button>
+      <button class="mail-btn"
+        onclick="window.location.href='mailto:lkankhanh00@gmail.com'">
+        lkankhanh00@gmail.com
+      </button>
     <div class="profile-card__actions">
             <a href="/ankhanh/">
               <button class="blue_more">More</button>
             </a>
-            <!-- <button class="orange">Follow Me</button> -->
-        </div>
+      </div>
+      
   </div>
+<div class="qr-modal" id="qrModal" onclick="closeQR(event)">
+  <div class="qr-content">
+    <img src="/images/some/vcb_9392722102.png" alt="QR VCB" />
+  </div>
+</div>
+<script src="/js/main.js"></script>
 </body>
 
 </html>
