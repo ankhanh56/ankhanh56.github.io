@@ -114,7 +114,9 @@ body::before{
     align-items: center;
     flex-wrap: wrap;
 }
-
+p{
+    text-transform: lowercase;
+}
 .profile-card__social a{
     display: inline-flex;
     width: 55px;
@@ -306,7 +308,7 @@ body::before{
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: .3s;
+  transition: .5s;
 }
 
 .mail-btn:hover {
