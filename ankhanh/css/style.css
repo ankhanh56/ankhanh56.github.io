@@ -1,84 +1,170 @@
-html, body { height:100%; margin:0 }
-body { background:#fff }
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 
-
-:root{
-  --c1:#ffd9c2; --c2:#f9c8d8; --c3:#f5b7c5; --c4:#e5c8ff;
-  --c5:#d3ccff; --c6:#c7d8ff; --c7:#cfe6ff; --c8:#eaf2ff;
-  --p1x:60%; --p1y:28%; --p2x:48%; --p2y:40%;
-  --p3x:40%; --p3y:55%; --p4x:78%; --p4y:18%;
-  --p5x:88%; --p5y:66%; --p6x:22%; --p6y:78%;
-  --p7x:34%; --p7y:86%; --p8x:16%; --p8y:36%;
+* {
+  box-sizing: border-box;
+  font: 18px "Nunito", sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
-body::before{
-  content:"";
-  position:fixed; inset:0; z-index:-1;
+
+html,
+body {
+  height: 100%;
+  margin: 0
+}
+
+body {
+  background: #fff;
+}
+
+
+:root {
+  --c1: #ffd9c2;
+  --c2: #f9c8d8;
+  --c3: #f5b7c5;
+  --c4: #e5c8ff;
+  --c5: #d3ccff;
+  --c6: #c7d8ff;
+  --c7: #cfe6ff;
+  --c8: #eaf2ff;
+  --p1x: 60%;
+  --p1y: 28%;
+  --p2x: 48%;
+  --p2y: 40%;
+  --p3x: 40%;
+  --p3y: 55%;
+  --p4x: 78%;
+  --p4y: 18%;
+  --p5x: 88%;
+  --p5y: 66%;
+  --p6x: 22%;
+  --p6y: 78%;
+  --p7x: 34%;
+  --p7y: 86%;
+  --p8x: 16%;
+  --p8y: 36%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background:
-    radial-gradient(60% 50% at var(--p1x) var(--p1y), var(--c1) 0%, rgba(255,217,194,0) 60%),
-    radial-gradient(50% 45% at var(--p2x) var(--p2y), var(--c2) 0%, rgba(249,200,216,0) 62%),
-    radial-gradient(55% 48% at var(--p3x) var(--p3y), var(--c3) 0%, rgba(245,183,197,0) 65%),
-    radial-gradient(60% 55% at var(--p4x) var(--p4y), var(--c5) 0%, rgba(211,204,255,0) 68%),
-    radial-gradient(65% 55% at var(--p5x) var(--p5y), var(--c6) 0%, rgba(199,216,255,0) 70%),
-    radial-gradient(65% 55% at var(--p6x) var(--p6y), var(--c7) 0%, rgba(207,230,255,0) 72%),
-    radial-gradient(70% 60% at var(--p7x) var(--p7y), var(--c8) 0%, rgba(234,242,255,0) 74%),
-    radial-gradient(65% 55% at var(--p8x) var(--p8y), var(--c4) 0%, rgba(229,200,255,0) 66%);
+    radial-gradient(60% 50% at var(--p1x) var(--p1y), var(--c1) 0%, rgba(255, 217, 194, 0) 60%),
+    radial-gradient(50% 45% at var(--p2x) var(--p2y), var(--c2) 0%, rgba(249, 200, 216, 0) 62%),
+    radial-gradient(55% 48% at var(--p3x) var(--p3y), var(--c3) 0%, rgba(245, 183, 197, 0) 65%),
+    radial-gradient(60% 55% at var(--p4x) var(--p4y), var(--c5) 0%, rgba(211, 204, 255, 0) 68%),
+    radial-gradient(65% 55% at var(--p5x) var(--p5y), var(--c6) 0%, rgba(199, 216, 255, 0) 70%),
+    radial-gradient(65% 55% at var(--p6x) var(--p6y), var(--c7) 0%, rgba(207, 230, 255, 0) 72%),
+    radial-gradient(70% 60% at var(--p7x) var(--p7y), var(--c8) 0%, rgba(234, 242, 255, 0) 74%),
+    radial-gradient(65% 55% at var(--p8x) var(--p8y), var(--c4) 0%, rgba(229, 200, 255, 0) 66%);
   background-blend-mode: screen;
   filter: blur(8px) saturate(110%);
   animation: subtle-zoom 28s ease-in-out infinite;
 }
-@keyframes subtle-zoom{
-  0%{ transform:scale(1) } 50%{ transform:scale(1.03) } 100%{ transform:scale(1) }
+
+@keyframes subtle-zoom {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.03)
+  }
+
+  100% {
+    transform: scale(1)
+  }
 }
-@media (prefers-reduced-motion: reduce){ body::before{ animation:none } }
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none
+  }
+}
 
 
-#loader{
-  position:fixed; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  background:#ffffff; z-index:9999;
-  opacity:1; transform:scale(1);
-  transition:opacity .7s ease, transform .7s ease;
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  z-index: 9999;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity .7s ease, transform .7s ease;
 }
-#loader.hide{
-  opacity:0; transform:scale(1.03);
-  pointer-events:none;
+
+#loader.hide {
+  opacity: 0;
+  transform: scale(1.03);
+  pointer-events: none;
 }
-.bar{
-  width:min(240px,70vw); height:4px; background:#f1f5f9;
-  border-radius:999px; overflow:hidden;
+
+.bar {
+  width: min(240px, 70vw);
+  height: 4px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
 }
-.bar .fill{
-  --progress:0;
-  display:block; height:100%; width:calc(var(--progress) * 1%);
-  background: linear-gradient(
-    90deg,
-    var(--c1),
-    var(--c2),
-    var(--c3),
-    var(--c4),
-    var(--c5),
-    var(--c6),
-    var(--c7),
-    var(--c8)
-  );
+
+.bar .fill {
+  --progress: 0;
+  display: block;
+  height: 100%;
+  width: calc(var(--progress) * 1%);
+  background: linear-gradient(90deg,
+      var(--c1),
+      var(--c2),
+      var(--c3),
+      var(--c4),
+      var(--c5),
+      var(--c6),
+      var(--c7),
+      var(--c8));
   background-size: 200% 100%;
   animation: gradient-slide 3s ease infinite;
-  border-radius:inherit;
-  transition:width .2s ease;
+  border-radius: inherit;
+  transition: width .2s ease;
 }
-@keyframes gradient-slide{
-  0%{ background-position:0% 50% }
-  50%{ background-position:100% 50% }
-  100%{ background-position:0% 50% }
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 
-body.ready::before{
-  animation:subtle-zoom 28s ease-in-out infinite, fadein 800ms ease both;
+body.ready::before {
+  animation: subtle-zoom 28s ease-in-out infinite, fadein 800ms ease both;
 }
-@keyframes fadein{ from{ opacity:0 } to{ opacity:1 } }
 
-footer{
-  text-align:center; padding:20px 0;
-  font-size:14px; color:#666;
+@keyframes fadein {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #666;
 }
