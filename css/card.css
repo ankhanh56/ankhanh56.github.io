@@ -242,7 +242,6 @@ p{
 }
 
 .qr-btn {
-  margin-top: 15px;
   padding: 15px 0;
   min-width: 250px;
   border: none;
@@ -297,7 +296,6 @@ p{
 }
 
 .mail-btn {
-    margin-top: 15px;
   padding: 15px 0;
   min-width: 250px;
   border: none;
@@ -312,6 +310,31 @@ p{
 }
 
 .mail-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 17px 30px rgba(19, 172, 212, 0.75);
+}
+
+.paypal-group {
+  display: flex;
+  gap: 10px;
+}
+
+.paypal-btn {
+  flex: 1;
+  padding: 15px 0;
+  min-width: 250px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.paypal-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 17px 30px rgba(19, 172, 212, 0.75);
 }
