@@ -16,6 +16,7 @@ body {
 
 body {
   background: #fff;
+  text-align: center;
 }
 
 
@@ -167,4 +168,97 @@ footer {
   padding: 20px 0;
   font-size: 14px;
   color: #666;
+}
+
+nav {
+  margin: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color .3s ease;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* line giữa */
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: #444;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* item */
+.timeline article {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+
+  /* animation (GIỮ) */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+/* khi hiện */
+.timeline article.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* trái */
+.timeline article:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+/* phải */
+.timeline article:nth-child(even) {
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+
+  /* kéo line sang trái */
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline article {
+    width: 100%;
+    left: 0 !important;
+    padding: 20px 20px 20px 50px;
+    text-align: left !important;
+  }
+
+  /* dot nằm theo line */
+  .timeline article::before {
+    left: 12px !important;
+    right: auto;
+  }
+
 }

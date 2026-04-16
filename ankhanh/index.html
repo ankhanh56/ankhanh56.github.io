@@ -17,11 +17,29 @@
       <div class="bar"><span class="fill"></span></div>
     </div>
     <header>
+      <nav>
+        <ul>
+          <li><a href="/ankhanh/">Home</a></li>
+          <li><a href="../">About</a></li>
+        </ul>
+      </nav>
       <section class="first-section">
         <h1>An Khánh - 天涯客</h1>
       </section>
-      <section class="second-section">
-      </section>
+      <!-- <section class="second-section timeline">
+        <article>
+          <h3>About Me</h3>
+          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
+        </article>
+        <article>
+          <h3>About Me</h3>
+          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
+        </article>
+        <article>
+          <h3>About Me</h3>
+          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
+        </article>
+      </section> -->
       <section class="third-section">
         
       </section>
@@ -39,5 +57,20 @@
       <p>&copy; 2026 An Khánh. All rights reserved.</p>
     </footer>
     <script src="script.js" defer></script>
+    <script>
+const items = document.querySelectorAll(".timeline article");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+items.forEach(item => observer.observe(item));
+</script>
   </body>
 </html>
