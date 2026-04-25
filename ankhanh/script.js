@@ -91,3 +91,17 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
+const btn = document.getElementById("bookmarkBtn");
+const popup = document.getElementById("popup");
+
+// mở popup
+btn.onclick = () => {
+  popup.classList.add("show");
+};
+
+// click ra ngoài để đóng
+popup.onclick = (e) => {
+  if (e.target === popup) {
+    popup.classList.remove("show");
+  }
+};

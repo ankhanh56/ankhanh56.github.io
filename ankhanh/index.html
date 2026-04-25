@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <head>
@@ -26,6 +26,18 @@
       <section class="first-section">
         <h1>An Khánh - 天涯客</h1>
       </section>
+      <section class="bookmark-section">
+        <button class="cool-btn" id="bookmarkBtn">Bookmarks</button>
+        <!-- Popup -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <ul>
+              <li><a href="https://hub.atk.pro/" target="_blank" rel="noopener noreferrer">ATK HUB</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- <section class="second-section timeline">
         <article>
           <h3>About Me</h3>
@@ -40,37 +52,32 @@
           <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
         </article>
       </section> -->
-      <section class="third-section">
-        
-      </section>
-      <section class="fourth-section">
-        
-      </section>
-      <section class="fifth-section">
-        
-      </section>
-      <section class="sixth-section">
-        
-      </section>
+      <section class="third-section"></section>
+      <section class="fourth-section"></section>
+      <section class="fifth-section"></section>
+      <section class="sixth-section"></section>
     </header>
     <footer>
       <p>&copy; 2026 An Khánh. All rights reserved.</p>
     </footer>
     <script src="script.js" defer></script>
     <script>
-const items = document.querySelectorAll(".timeline article");
+      const items = document.querySelectorAll(".timeline article");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.2
-});
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        },
+      );
 
-items.forEach(item => observer.observe(item));
-</script>
+      items.forEach((item) => observer.observe(item));
+    </script>
   </body>
 </html>
