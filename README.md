@@ -9,3 +9,4 @@
 [Page]: https://ankhanh56.github.io
 [Clock]:https://ankhanh56.github.io/time.html
 [Linh tinh]:https://ankhanh56.github.io/ankhanh
+[Slide]: https://ankhanh56.github.io/slide
