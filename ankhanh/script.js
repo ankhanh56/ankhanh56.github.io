@@ -92,16 +92,26 @@ document.addEventListener("visibilitychange", () => {
 });
 
 const btn = document.getElementById("bookmarkBtn");
+const steamshowcaseBtn = document.getElementById("steamshowcaseBtn");
 const popup = document.getElementById("popup");
+const popupz = document.getElementById("popupz");
 
 // mở popup
 btn.onclick = () => {
   popup.classList.add("show");
+};
+steamshowcaseBtn.onclick = () => {
+  popupz.classList.add("zshow");
 };
 
 // click ra ngoài để đóng
 popup.onclick = (e) => {
   if (e.target === popup) {
     popup.classList.remove("show");
+  }
+};
+popupz.onclick = (e) => {
+  if (e.target === popupz) {
+    popupz.classList.remove("zshow");
   }
 };

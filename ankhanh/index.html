@@ -1,83 +1,92 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./css/style.css" />
-      <link rel="stylesheet" href="../css/reset.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="icon" href="../images/ayakakhung.webp" type="image/x-icon" />
-      <title>An Khánh</title>
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../images/ayakakhung.webp" type="image/x-icon" />
+    <title>An Khánh</title>
   </head>
-  <body>
-    <div id="loader" aria-hidden="true">
-      <div class="bar"><span class="fill"></span></div>
-    </div>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/ankhanh/">Home</a></li>
-          <li><a href="../">About</a></li>
-        </ul>
-      </nav>
-      <section class="first-section">
-        <h1>An Khánh - 天涯客</h1>
-      </section>
-      <section class="bookmark-section">
-        <button class="cool-btn" id="bookmarkBtn">Bookmarks</button>
-        <!-- Popup -->
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <ul>
-              <li><a href="https://hub.atk.pro/" target="_blank" rel="noopener noreferrer">ATK HUB</a></li>
-              
-            </ul>
-          </div>
+</head>
+
+<body>
+  <div id="loader" aria-hidden="true">
+    <div class="bar"><span class="fill"></span></div>
+  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/ankhanh/">Home</a></li>
+        <li><a href="../">About</a></li>
+      </ul>
+    </nav>
+    <section class="first-section">
+      <h1>An Khánh - 天涯客</h1>
+    </section>
+    <section class="bookmark-section">
+      <button class="cool-btn" id="bookmarkBtn">Bookmarks</button>
+      <!-- Popup -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <ul>
+            <li><a href="https://hub.atk.pro/" target="_blank" rel="noopener noreferrer">ATK HUB</a></li>
+
+          </ul>
         </div>
-      </section>
-      <!-- <section class="second-section timeline">
-        <article>
-          <h3>About Me</h3>
-          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
-        </article>
-        <article>
-          <h3>About Me</h3>
-          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
-        </article>
-        <article>
-          <h3>About Me</h3>
-          <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
-        </article>
-      </section> -->
-      <section class="third-section"></section>
-      <section class="fourth-section"></section>
-      <section class="fifth-section"></section>
-      <section class="sixth-section"></section>
-    </header>
-    <footer>
-      <p>&copy; 2026 An Khánh. All rights reserved.</p>
-    </footer>
-    <script src="script.js" defer></script>
-    <script>
-      const items = document.querySelectorAll(".timeline article");
+      </div>
+    </section>
+    <section class="steamshowcase-section">
+      <button class="cool-btn" id="steamshowcaseBtn">Steam Showcase</button>
+      <!-- Popup -->
+      <div id="popupz" class="popupz">
+        <div class="popupz-zcontent">
+          <h1>Steam Showcase</h1>
+          <p>.......................................................................</p>
+          <p>
+            Artworks code F12: $J('#image_width').val('1000');$J('#image_height').val('1');
+          </p>
+          <p>Screenshot code F12:
+            $J('#image_width').val('1000');$J('#image_height').val('1');$J('[name="file_type"]').val("5");
+          </p>
+          <p>Workshop code F12:
+            document.getElementsByName("file_type")[0].value = 11;
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        },
-        {
-          threshold: 0.2,
-        },
-      );
+          </p>
+          <p><strong>New Code:</strong>
+            $J('[name=consumer_app_id]').val(480);$J('[name=file_type]').val(0);$J('[name=visibility]').val(0);
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <footer>
+    <p>&copy; 2026 An Khánh. All rights reserved.</p>
+  </footer>
+  <script src="script.js" defer></script>
+  <script>
+    const items = document.querySelectorAll(".timeline article");
 
-      items.forEach((item) => observer.observe(item));
-    </script>
-  </body>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    items.forEach((item) => observer.observe(item));
+  </script>
+</body>
+
 </html>
