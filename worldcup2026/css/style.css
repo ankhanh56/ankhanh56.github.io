@@ -2,21 +2,31 @@
 
 body {
   font:
-    18px "Nunito",
-    sans-serif;
+    18px "Nunito", sans-serif;
   color: black;
   min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.page-title {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 
 h1 {
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 20px;
-  font-weight: bold;
+  margin: 0;
   background-image: linear-gradient(to right, #e61d25, #3cac3b, #2a398d);
   -webkit-background-clip: text;
   background-clip: text;
@@ -24,221 +34,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.day-card{
 
-background:#101b31;
-
-border-radius:20px;
-
-overflow:hidden;
-
-margin-bottom:30px;
-
-box-shadow:
-
-0 20px 60px
-
-rgba(
-0,
-0,
-0,
-.3
-);
-
-}
-
-.day-header{
-
-padding:18px;
-
-font-size:22px;
-
-font-weight:800;
-
-background:
-
-linear-gradient(
-90deg,
-#2563eb,
-#7c3aed
-);
-
-}
-
-.table{
-
-color:white;
-
-margin:0;
-
-}
-
-.table td{
-
-padding:18px;
-
-vertical-align:middle;
-
-border-color:
-
-rgba(
-255,
-255,
-255,
-.08
-);
-
-}
-
-.match-time{
-
-width:120px;
-
-font-weight:700;
-
-color:#60a5fa;
-
-}
-
-.team{
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-font-weight:700;
-
-}
-
-.flag{
-
-width:34px;
-
-height:24px;
-
-border-radius:6px;
-
-object-fit:cover;
-
-}
-
-.score{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:12px;
-
-}
-
-.score input{
-
-width:55px;
-
-height:42px;
-
-background:#1d2945;
-
-border:none;
-
-border-radius:10px;
-
-color:white;
-
-font-weight:800;
-
-text-align:center;
-
-}
-
-.score input:focus{
-
-outline:none;
-
-}
-
-.vs{
-
-font-size:18px;
-
-font-weight:900;
-
-color:#93c5fd;
-
-}
-
-.status{
-
-padding:6px 14px;
-
-border-radius:20px;
-
-font-size:13px;
-
-font-weight:700;
-
-}
-
-.wait{
-
-background:#1d4ed8;
-
-}
-
-.live{
-
-background:#dc2626;
-
-}
-
-.done{
-
-background:#15803d;
-
-}
-
-.channel{
-
-color:#a1a1aa;
-
-}
-
-tr:hover{
-
-background:
-
-rgba(
-255,
-255,
-255,
-.03
-);
-
-}
-
-@media(max-width:900px){
-
-.table{
-
-font-size:14px;
-
-}
-
-.team{
-
-flex-direction:column;
-
-}
-
-.score{
-
-flex-direction:column;
-
-}
-
+.match-schedule {
+  margin-top: 100px;
 }
