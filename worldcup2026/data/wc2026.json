@@ -72,6 +72,14 @@
       "time": "2:00 UTC+7",
       "team1": "Canada",
       "team2": "Bosnia & Herzegovina",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "Toronto"
     },
@@ -81,6 +89,14 @@
       "time": "8:00 UTC+7",
       "team1": "USA",
       "team2": "Paraguay",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -90,6 +106,14 @@
       "time": "2:00 UTC+7",
       "team1": "Qatar",
       "team2": "Switzerland",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -99,6 +123,14 @@
       "time": "5:00 UTC+7",
       "team1": "Brazil",
       "team2": "Morocco",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -108,6 +140,14 @@
       "time": "8:00 UTC+7",
       "team1": "Haiti",
       "team2": "Scotland",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "Boston (Foxborough)"
     },
@@ -117,6 +157,14 @@
       "time": "11:00 UTC+7",
       "team1": "Australia",
       "team2": "Turkey",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "Vancouver"
     },
@@ -126,6 +174,14 @@
       "time": "0:00 UTC+7",
       "team1": "Germany",
       "team2": "Curaçao",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group E",
       "ground": "Houston"
     },
@@ -135,6 +191,14 @@
       "time": "3:00 UTC+7",
       "team1": "Netherlands",
       "team2": "Japan",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Dallas (Arlington)"
     },
@@ -144,6 +208,14 @@
       "time": "6:00 UTC+7",
       "team1": "Ivory Coast",
       "team2": "Ecuador",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group E",
       "ground": "Philadelphia"
     },
@@ -153,6 +225,14 @@
       "time": "9:00 UTC+7",
       "team1": "Sweden",
       "team2": "Tunisia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Monterrey (Guadalupe)"
     },
@@ -162,6 +242,14 @@
       "time": "23:00 UTC+7",
       "team1": "Spain",
       "team2": "Cape Verde",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Atlanta"
     },
@@ -171,6 +259,14 @@
       "time": "2:00 UTC+7",
       "team1": "Belgium",
       "team2": "Egypt",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Seattle"
     },
@@ -180,6 +276,14 @@
       "time": "5:00 UTC+7",
       "team1": "Saudi Arabia",
       "team2": "Uruguay",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Miami (Miami Gardens)"
     },
@@ -189,6 +293,14 @@
       "time": "8:00 UTC+7",
       "team1": "Iran",
       "team2": "New Zealand",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -198,6 +310,14 @@
       "time": "2:00 UTC+7",
       "team1": "France",
       "team2": "Senegal",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -207,6 +327,14 @@
       "time": "5:00 UTC+7",
       "team1": "Iraq",
       "team2": "Norway",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "Boston (Foxborough)"
     },
@@ -216,6 +344,14 @@
       "time": "8:00 UTC+7",
       "team1": "Argentina",
       "team2": "Algeria",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "Kansas City"
     },
@@ -225,6 +361,14 @@
       "time": "11:00 UTC+7",
       "team1": "Austria",
       "team2": "Jordan",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -234,6 +378,14 @@
       "time": "0:00 UTC+7",
       "team1": "Portugal",
       "team2": "DR Congo",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Houston"
     },
@@ -243,6 +395,14 @@
       "time": "3:00 UTC+7",
       "team1": "England",
       "team2": "Croatia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "Dallas (Arlington)"
     },
@@ -252,6 +412,14 @@
       "time": "6:00 UTC+7",
       "team1": "Ghana",
       "team2": "Panama",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "Toronto"
     },
@@ -261,6 +429,14 @@
       "time": "9:00 UTC+7",
       "team1": "Uzbekistan",
       "team2": "Colombia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Mexico City"
     },
@@ -270,6 +446,14 @@
       "time": "23:00 UTC+7",
       "team1": "Czech Republic",
       "team2": "South Africa",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group A",
       "ground": "Atlanta"
     },
@@ -279,6 +463,14 @@
       "time": "2:00 UTC+7",
       "team1": "Switzerland",
       "team2": "Bosnia & Herzegovina",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -288,6 +480,14 @@
       "time": "5:00 UTC+7",
       "team1": "Canada",
       "team2": "Qatar",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "Vancouver"
     },
@@ -297,6 +497,14 @@
       "time": "8:00 UTC+7",
       "team1": "Mexico",
       "team2": "South Korea",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group A",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -306,6 +514,14 @@
       "time": "2:00 UTC+7",
       "team1": "USA",
       "team2": "Australia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "Seattle"
     },
@@ -315,6 +531,14 @@
       "time": "5:00 UTC+7",
       "team1": "Scotland",
       "team2": "Morocco",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "Boston (Foxborough)"
     },
@@ -324,6 +548,14 @@
       "time": "8:00 UTC+7",
       "team1": "Brazil",
       "team2": "Haiti",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "Philadelphia"
     },
@@ -333,6 +565,14 @@
       "time": "11:00 UTC+7",
       "team1": "Turkey",
       "team2": "Paraguay",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -342,6 +582,14 @@
       "time": "0:00 UTC+7",
       "team1": "Netherlands",
       "team2": "Sweden",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Houston"
     },
@@ -351,6 +599,14 @@
       "time": "3:00 UTC+7",
       "team1": "Germany",
       "team2": "Ivory Coast",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group E",
       "ground": "Toronto"
     },
@@ -360,6 +616,14 @@
       "time": "7:00 UTC+7",
       "team1": "Ecuador",
       "team2": "Curaçao",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group E",
       "ground": "Kansas City"
     },
@@ -369,6 +633,14 @@
       "time": "11:00 UTC+7",
       "team1": "Tunisia",
       "team2": "Japan",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Monterrey (Guadalupe)"
     },
@@ -378,6 +650,14 @@
       "time": "23:00 UTC+7",
       "team1": "Spain",
       "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Atlanta"
     },
@@ -387,6 +667,14 @@
       "time": "2:00 UTC+7",
       "team1": "Belgium",
       "team2": "Iran",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -396,6 +684,14 @@
       "time": "5:00 UTC+7",
       "team1": "Uruguay",
       "team2": "Cape Verde",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Miami (Miami Gardens)"
     },
@@ -405,6 +701,14 @@
       "time": "8:00 UTC+7",
       "team1": "New Zealand",
       "team2": "Egypt",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Vancouver"
     },
@@ -414,6 +718,14 @@
       "time": "0:00 UTC+7",
       "team1": "Argentina",
       "team2": "Austria",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "Dallas (Arlington)"
     },
@@ -423,6 +735,14 @@
       "time": "4:00 UTC+7",
       "team1": "France",
       "team2": "Iraq",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "Philadelphia"
     },
@@ -432,6 +752,14 @@
       "time": "7:00 UTC+7",
       "team1": "Norway",
       "team2": "Senegal",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -441,6 +769,14 @@
       "time": "10:00 UTC+7",
       "team1": "Jordan",
       "team2": "Algeria",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -450,6 +786,14 @@
       "time": "0:00 UTC+7",
       "team1": "Portugal",
       "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Houston"
     },
@@ -459,6 +803,14 @@
       "time": "3:00 UTC+7",
       "team1": "England",
       "team2": "Ghana",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "Boston (Foxborough)"
     },
@@ -468,6 +820,14 @@
       "time": "6:00 UTC+7",
       "team1": "Panama",
       "team2": "Croatia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "Toronto"
     },
@@ -477,6 +837,14 @@
       "time": "9:00 UTC+7",
       "team1": "Colombia",
       "team2": "DR Congo",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -486,6 +854,14 @@
       "time": "2:00 UTC+7",
       "team1": "Switzerland",
       "team2": "Canada",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "Vancouver"
     },
@@ -495,6 +871,14 @@
       "time": "2:00 UTC+7",
       "team1": "Bosnia & Herzegovina",
       "team2": "Qatar",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group B",
       "ground": "Seattle"
     },
@@ -504,6 +888,14 @@
       "time": "5:00 UTC+7",
       "team1": "Scotland",
       "team2": "Brazil",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "Miami (Miami Gardens)"
     },
@@ -513,6 +905,14 @@
       "time": "5:00 UTC+7",
       "team1": "Morocco",
       "team2": "Haiti",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group C",
       "ground": "Atlanta"
     },
@@ -522,6 +922,14 @@
       "time": "8:00 UTC+7",
       "team1": "Czech Republic",
       "team2": "Mexico",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group A",
       "ground": "Mexico City"
     },
@@ -531,6 +939,14 @@
       "time": "8:00 UTC+7",
       "team1": "South Africa",
       "team2": "South Korea",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group A",
       "ground": "Monterrey (Guadalupe)"
     },
@@ -540,6 +956,14 @@
       "time": "3:00 UTC+7",
       "team1": "Curaçao",
       "team2": "Ivory Coast",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group E",
       "ground": "Philadelphia"
     },
@@ -549,6 +973,14 @@
       "time": "3:00 UTC+7",
       "team1": "Ecuador",
       "team2": "Germany",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },  
       "group": "Group E",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -558,6 +990,14 @@
       "time": "6:00 UTC+7",
       "team1": "Japan",
       "team2": "Sweden",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Dallas (Arlington)"
     },
@@ -567,6 +1007,14 @@
       "time": "6:00 UTC+7",
       "team1": "Tunisia",
       "team2": "Netherlands",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group F",
       "ground": "Kansas City"
     },
@@ -576,6 +1024,14 @@
       "time": "8:00 UTC+7",
       "team1": "Turkey",
       "team2": "USA",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -585,6 +1041,14 @@
       "time": "8:00 UTC+7",
       "team1": "Paraguay",
       "team2": "Australia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group D",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -594,6 +1058,14 @@
       "time": "2:00 UTC+7",
       "team1": "Norway",
       "team2": "France",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "Boston (Foxborough)"
     },
@@ -603,6 +1075,14 @@
       "time": "2:00 UTC+7",
       "team1": "Senegal",
       "team2": "Iraq",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group I",
       "ground": "Toronto"
     },
@@ -612,6 +1092,14 @@
       "time": "7:00 UTC+7",
       "team1": "Cape Verde",
       "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Houston"
     },
@@ -621,6 +1109,14 @@
       "time": "7:00 UTC+7",
       "team1": "Uruguay",
       "team2": "Spain",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group H",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -630,6 +1126,14 @@
       "time": "10:00 UTC+7",
       "team1": "Egypt",
       "team2": "Iran",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Seattle"
     },
@@ -639,6 +1143,14 @@
       "time": "10:00 UTC+7",
       "team1": "New Zealand",
       "team2": "Belgium",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group G",
       "ground": "Vancouver"
     },
@@ -648,6 +1160,14 @@
       "time": "4:00 UTC+7",
       "team1": "Panama",
       "team2": "England",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -657,6 +1177,14 @@
       "time": "4:00 UTC+7",
       "team1": "Croatia",
       "team2": "Ghana",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group L",
       "ground": "Philadelphia"
     },
@@ -666,6 +1194,14 @@
       "time": "6:30 UTC+7",
       "team1": "Colombia",
       "team2": "Portugal",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Miami (Miami Gardens)"
     },
@@ -675,6 +1211,14 @@
       "time": "6:30 UTC+7",
       "team1": "DR Congo",
       "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group K",
       "ground": "Atlanta"
     },
@@ -684,6 +1228,14 @@
       "time": "9:00 UTC+7",
       "team1": "Algeria",
       "team2": "Austria",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "Kansas City"
     },
@@ -693,6 +1245,14 @@
       "time": "9:00 UTC+7",
       "team1": "Jordan",
       "team2": "Argentina",
+      "score": {
+        "ft": [
+          
+        ],
+        "ht": [
+          
+        ]
+      },
       "group": "Group J",
       "ground": "Dallas (Arlington)"
     },
