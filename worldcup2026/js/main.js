@@ -311,5 +311,5 @@ Promise.all([
     setInterval(applyHighlight, 60000);
   })
   .catch((error) => {
-    console.error("Không đọc được dữ liệu JSON:", error);
+    console.error("Can't read file JSON:", error);
   });
