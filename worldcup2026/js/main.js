@@ -49,6 +49,37 @@ const flagMap = {
   "Scotland": "https://flagcdn.com/w80/gb-sct.png"
 };
 
+function renderGroups(groups) {
+  const root = document.getElementById("groups-grid");
+  if (!root) return;
+
+  root.innerHTML = "";
+
+  groups.forEach((group) => {
+    const card = document.createElement("div");
+    card.className = "group-card";
+
+    const teamsHtml = (group.teams || [])
+      .map((team) => {
+        const flag = flagMap[team] || fallbackFlag;
+        return `
+          <div class="group-team">
+            <img src="${flag}" alt="${team}" loading="lazy" width="18" height="18">
+            <span>${team}</span>
+          </div>
+        `;
+      })
+      .join("");
+
+    card.innerHTML = `
+      <div class="group-name">${String(group.name || "").replace("Group", "BẢNG")}</div>
+      <div class="group-teams">${teamsHtml}</div>
+    `;
+
+    root.appendChild(card);
+  });
+}
+
 const fallbackFlag = "https://flagcdn.com/w80/un.png";
 const MATCH_DURATION_MINUTES = 120;
 
@@ -183,7 +214,7 @@ function applyHighlight() {
   const now = Date.now();
   const duration = MATCH_DURATION_MINUTES * 60 * 1000;
   const cards = [...document.querySelectorAll(".match-card")];
-
+  const teamNames = [...document.querySelectorAll(".team-name")];
   let liveCard = null;
   let nextCard = null;
   let smallestFutureDiff = Infinity;
@@ -222,16 +253,21 @@ function renderRounds(matches) {
   applyHighlight();
 }
 
-fetch("./data/wc2026.json")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
-    }
+Promise.all([
+  fetch("./data/wc2026.json").then((res) => {
+    if (!res.ok) throw new Error(`wc2026.json HTTP ${res.status}`);
+    return res.json();
+  }),
+  fetch("./data/group.json").then((res) => {
+    if (!res.ok) throw new Error(`group.json HTTP ${res.status}`);
     return res.json();
   })
-  .then((json) => {
-    renderRounds(json.matches || []);
+])
+  .then(([matchData, groupData]) => {
+    renderRounds(matchData.matches || []);
+    renderGroups(groupData.groups || []);
+    setInterval(applyHighlight, 60000);
   })
   .catch((error) => {
-    console.error("Không đọc được wc2026.json:", error);
+    console.error("Không đọc được dữ liệu JSON:", error);
   });
