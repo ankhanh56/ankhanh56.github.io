@@ -49,7 +49,35 @@ const flagMap = {
   "Scotland": "https://flagcdn.com/w80/gb-sct.png"
 };
 
-function renderGroups(groups) {
+function buildPointsTable(matches) {
+  const points = {};
+
+  matches.forEach((match) => {
+    const ft = match?.score?.ft;
+
+    if (!match.group || !Array.isArray(ft) || ft.length !== 2) return;
+
+    const [score1, score2] = ft;
+    const team1 = match.team1;
+    const team2 = match.team2;
+
+    if (!points[team1]) points[team1] = 0;
+    if (!points[team2]) points[team2] = 0;
+
+    if (score1 > score2) {
+      points[team1] += 3;
+    } else if (score1 < score2) {
+      points[team2] += 3;
+    } else {
+      points[team1] += 1;
+      points[team2] += 1;
+    }
+  });
+
+  return points;
+}
+
+function renderGroups(groups, pointsTable) {
   const root = document.getElementById("groups-grid");
   if (!root) return;
 
@@ -59,13 +87,23 @@ function renderGroups(groups) {
     const card = document.createElement("div");
     card.className = "group-card";
 
-    const teamsHtml = (group.teams || [])
+    const teams = (group.teams || []).map((team) => {
+      return {
+        name: team,
+        points: pointsTable[team] || 0
+      };
+    });
+
+    teams.sort((a, b) => b.points - a.points || a.name.localeCompare(b.name));
+
+    const teamsHtml = teams
       .map((team) => {
-        const flag = flagMap[team] || fallbackFlag;
+        const flag = flagMap[team.name] || fallbackFlag;
         return `
           <div class="group-team">
-            <img src="${flag}" alt="${team}" loading="lazy" width="18" height="18">
-            <span>${team}</span>
+            <img src="${flag}" alt="${team.name}" loading="lazy" width="14" height="14">
+            <span class="group-team-name">${team.name}</span>
+            <span class="group-team-points">${team.points}</span>
           </div>
         `;
       })
@@ -264,8 +302,12 @@ Promise.all([
   })
 ])
   .then(([matchData, groupData]) => {
-    renderRounds(matchData.matches || []);
-    renderGroups(groupData.groups || []);
+    const matches = matchData.matches || [];
+    const groups = groupData.groups || [];
+    const pointsTable = buildPointsTable(matches);
+
+    renderRounds(matches);
+    renderGroups(groups, pointsTable);
     setInterval(applyHighlight, 60000);
   })
   .catch((error) => {
