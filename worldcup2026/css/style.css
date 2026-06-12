@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+body {
+  font:
+    18px "Nunito",
+    sans-serif;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #e61d25, #3cac3b, #2a398d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
