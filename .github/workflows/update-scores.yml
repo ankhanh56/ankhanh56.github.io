@@ -22,9 +22,10 @@ jobs:
           node-version: 20
 
       - name: Update JSON from Google Sheets
+        working-directory: worldcup2026
         env:
           SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
-        run: node worldcup2026/scripts/update-from-sheet.mjs
+        run: node scripts/update-from-sheet.mjs
 
       - name: Commit and push if changed
         run: |

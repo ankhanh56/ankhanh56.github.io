@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const FILE_PATH = path.join(__dirname, "..", "worldcup2026", "data", "wc2026.json");
+const FILE_PATH = path.join(__dirname, "..", "data", "data", "wc2026.json");
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL;
 
 if (!SHEET_CSV_URL) {
