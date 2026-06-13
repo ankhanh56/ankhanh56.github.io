@@ -291,24 +291,31 @@ function renderRounds(matches) {
   applyHighlight();
 }
 
-const version = Date.now();
-Promise.all([
-  fetch(`./data/wc2026.json?v=${version}`, {caches: "no-store"}).then((res) => {
-    if (!res.ok) throw new Error(`wc2026.json HTTP ${res.status}`);
-    return res.json();
-  }),
-  fetch(`./data/group.json?v=${version}`, {caches: "no-store"}).then((res) => {
-    if (!res.ok) throw new Error(`group.json HTTP ${res.status}`);
-    return res.json();
-  })
-])
-  .then(([matchData, groupData]) => {
-    const matches = matchData.matches || [];
-    const groups = groupData.groups || [];
-    const pointsTable = buildPointsTable(matches);
+async function loadData() {
+  const version = Date.now();
 
-    renderRounds(matches);
-    renderGroups(groups, pointsTable);
+  const [matchData, groupData] = await Promise.all([
+    fetch(`./data/wc2026.json?v=${version}`, { cache: "no-store" }).then((res) => {
+      if (!res.ok) throw new Error(`wc2026.json HTTP ${res.status}`);
+      return res.json();
+    }),
+    fetch(`./data/group.json?v=${version}`, { cache: "no-store" }).then((res) => {
+      if (!res.ok) throw new Error(`group.json HTTP ${res.status}`);
+      return res.json();
+    })
+  ]);
+
+  const matches = matchData.matches || [];
+  const groups = groupData.groups || [];
+  const pointsTable = buildPointsTable(matches);
+
+  renderRounds(matches);
+  renderGroups(groups, pointsTable);
+}
+
+loadData()
+  .then(() => {
+    setInterval(loadData, 60000);
     setInterval(applyHighlight, 60000);
   })
   .catch((error) => {
