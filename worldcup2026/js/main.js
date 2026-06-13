@@ -291,12 +291,13 @@ function renderRounds(matches) {
   applyHighlight();
 }
 
+const version = Date.now();
 Promise.all([
-  fetch("./data/wc2026.json").then((res) => {
+  fetch(`./data/wc2026.json?v=${version}`, {caches: "no-store"}).then((res) => {
     if (!res.ok) throw new Error(`wc2026.json HTTP ${res.status}`);
     return res.json();
   }),
-  fetch("./data/group.json").then((res) => {
+  fetch(`./data/group.json?v=${version}`, {caches: "no-store"}).then((res) => {
     if (!res.ok) throw new Error(`group.json HTTP ${res.status}`);
     return res.json();
   })
