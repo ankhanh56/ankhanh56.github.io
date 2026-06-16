@@ -218,9 +218,7 @@ function splitByGroupAndMatchday(matches) {
 
   matches.forEach((match) => {
     const groupName = match.group || "Unknown";
-    if (!groupMap[groupName]) {
-      groupMap[groupName] = [];
-    }
+    if (!groupMap[groupName]) groupMap[groupName] = [];
     groupMap[groupName].push(match);
   });
 
@@ -230,12 +228,19 @@ function splitByGroupAndMatchday(matches) {
 
   groupOrder.forEach((groupName) => {
     if (!groupMap[groupName]) return;
+
     const groupMatches = sortGroupMatches(groupMap[groupName]);
 
     round1.push(...groupMatches.slice(0, 2));
     round2.push(...groupMatches.slice(2, 4));
     round3.push(...groupMatches.slice(4, 6));
   });
+
+  const sortByDateTime = (a, b) => parseMatchDateTime(a) - parseMatchDateTime(b);
+
+  round1.sort(sortByDateTime);
+  round2.sort(sortByDateTime);
+  round3.sort(sortByDateTime);
 
   return { round1, round2, round3 };
 }
